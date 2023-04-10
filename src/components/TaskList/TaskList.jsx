@@ -1,11 +1,10 @@
-import { Task } from "components/Task/Task";
-import css from "./TaskList.module.css";
 import { useSelector } from "react-redux";
+import { Task } from "components/Task/Task";
+import { getTasks, getStatusFilter } from "redux/selectors";
 import { statusFilters } from "redux/constants";
-import { getStatusfilter, getTasks } from "redux/selectors";
+import css from "./TaskList.module.css";
 
-
-const getVisibleTasks = (tasks, statusFilter ) => {
+const getVisibleTasks = (tasks, statusFilter) => {
   switch (statusFilter) {
     case statusFilters.active:
       return tasks.filter(task => !task.completed);
@@ -14,14 +13,13 @@ const getVisibleTasks = (tasks, statusFilter ) => {
     default:
       return tasks;
   }
-}
-
+};
 
 export const TaskList = () => {
-  const tasks = useSelector(getTasks)
-  const statusFilter = useSelector(getStatusfilter)
-  const visibleTasks = getVisibleTasks(tasks, statusFilter )
-   
+  const tasks = useSelector(getTasks);
+  const statusFilter = useSelector(getStatusFilter);
+  const visibleTasks = getVisibleTasks(tasks, statusFilter);
+
   return (
     <ul className={css.list}>
       {visibleTasks.map(task => (
