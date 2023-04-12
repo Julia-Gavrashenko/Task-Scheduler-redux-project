@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Task-Scheduler-redux-project/static/css/main.5763847e.css",
+    "main.js": "/Task-Scheduler-redux-project/static/js/main.18dafc1a.js",
+    "index.html": "/Task-Scheduler-redux-project/index.html",
+    "main.5763847e.css.map": "/Task-Scheduler-redux-project/static/css/main.5763847e.css.map",
+    "main.18dafc1a.js.map": "/Task-Scheduler-redux-project/static/js/main.18dafc1a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5763847e.css",
+    "static/js/main.18dafc1a.js"
+  ]
+}
